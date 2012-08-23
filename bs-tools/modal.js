@@ -200,7 +200,9 @@ var Modal = (function(){
       }
 
       isLoading = true;
-      body().empty().css('height', '200px').spin("large", "#ccc");
+      body().html( 
+        $('<marquee>Loading!!!</marquee>') 
+      );
       this.display();
       return this;
     },

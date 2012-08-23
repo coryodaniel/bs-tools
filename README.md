@@ -48,7 +48,7 @@ Breadcrumb gives you an interface to push and pop breadcrumbs. Pass one argument
 final crumb (span) pass two arguments for a COOL link.
 
 ```hrml
-<div id="breadcrumbs"></div>
+<ul id="breadcrumbs" class="breadcrumb"></ul>
 ```
 
 ```javascript
