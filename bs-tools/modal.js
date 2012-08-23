@@ -114,10 +114,10 @@ var Modal = (function(){
       
       if( this.visible() ){
         body().slideUp(function(){
-          body().css('height', 'auto').html(html).slideDown();
+          body().removeClass('modal-loading').html(html).slideDown();
         });
       } else {
-        body().css('height', 'auto').html(html);
+        body().removeClass('modal-loading').html(html);
       }
 
       return this;      
