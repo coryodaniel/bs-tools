@@ -315,17 +315,11 @@ var Modal = (function(){
      * @return {Modal} Chainable response
      * @api public
      */         
-    init : function(noFooter){
+    init : function(eleid, noFooter){
       if( reflection ){ return this; }
+      if( eleid ){ id = eleid };
       reflection = this;
-      $('body').append(
-        Handlebars.templates['views/modal']({
-          id:     id,
-          title:  "hi",
-          small:  "small",
-          body:   "body"
-        })
-      );
+      $('body').append('<div class="modal fade in" id="modal"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>Modal</h3></div><div class="modal-body"></div><div class="modal-footer"><a class="btn cancel modal-cancel">Close</a></div></div>');
 
       ele = $('#' + id);
       if( noFooter ){ footer().empty(); }
