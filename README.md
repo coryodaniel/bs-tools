@@ -6,7 +6,9 @@
 2. Modal  - a singleton-esque modal tool
 3. Breadcrumb - Popping and pushing breadcrumbs
 
+Check out the sweet JS Fiddle demoing this instead of reading. READING SUCKS.
 
+[BS JS Fiddle](http://jsfiddle.net/coryodaniel/DMnfB/)
 
 # Using HUD
 
