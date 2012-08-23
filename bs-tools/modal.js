@@ -25,8 +25,7 @@ THE SOFTWARE.
 */
 var Modal = (function(){
   var reflection; /* tracks if this has been initialized, also gives access to 'this' to privates */
-  var ele, id, isLoading;
-  id = 'modal';
+  var ele, isLoading;
 
   function body(){
     if( ele ){
@@ -315,13 +314,13 @@ var Modal = (function(){
      * @return {Modal} Chainable response
      * @api public
      */         
-    init : function(eleid, noFooter){
+    init : function(noFooter){
       if( reflection ){ return this; }
-      if( eleid ){ id = eleid };
+
       reflection = this;
       $('body').append('<div class="modal fade in" id="modal"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>Modal</h3></div><div class="modal-body"></div><div class="modal-footer"><a class="btn cancel modal-cancel">Close</a></div></div>');
 
-      ele = $('#' + id);
+      ele = $('#modal');
       if( noFooter ){ footer().empty(); }
 
       return this;
