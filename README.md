@@ -44,15 +44,40 @@ Other things you can do with it
 
 # Using Breadcrumb
 
+Breadcrumb gives you an interface to push and pop breadcrumbs. Pass one argument for the
+final crumb (span) pass two arguments for a COOL link.
+
 ```hrml
 <div id="breadcrumbs"></div>
 ```
 
 ```javascript
-```
+$(function(){
+  //Init that bad boy & push some crumbs
+  Breadcrumb.init('#breadcrumb').
+    push("Home", "http://example.com").
+    push("SockFarm", "http://example.com/socks");
 
-clear 
-set
-last
-push
-pop
+  //Push a span onto the end
+  Breadcrumb.push("Destination");
+
+  //Pop dat
+  Breadcrumb.pop();
+
+  //Clear them all except the root
+  Breadcrumb.clear();
+
+  //Clear the root too
+  Breadcrumb.clear(true);
+
+  //Set a bunch
+  Breadcrumb.set({
+    "USA": 'http://cool.com',
+    "CA": 'http://cooler.com',
+    "Los Angeles": 'http://coolest.com',
+    "My House" : null
+  });
+
+  Breadcrumb.last() // => Retreives the last href
+});
+```
