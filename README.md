@@ -83,3 +83,16 @@ $(function(){
   Breadcrumb.last() // => Retreives the last href
 });
 ```
+
+# Using Modal
+There are two additional CSS classes added to modals with this tool.
+* modal-loading added to modal-body. Set up your loading modal
+* modal-form added to modal wrapper. Changes the css so bootstrap forms fit inside well.
+
+```javascript
+Modal.init(true); //skip the footer, optional
+Modal.loading(); 
+Modal.setBody("NICE BODY");
+Modal.setBody("NICE BODY", true); // ads
+
+```
