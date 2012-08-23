@@ -200,9 +200,8 @@ var Modal = (function(){
       }
 
       isLoading = true;
-      body().html( 
-        $('<marquee>Loading!!!</marquee>') 
-      );
+      body().html( '' ).addClass('modal-loading');
+        
       this.display();
       return this;
     },
