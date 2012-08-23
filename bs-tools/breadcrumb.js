@@ -26,7 +26,7 @@ THE SOFTWARE.
 var Breadcrumb = {
   selector: null,
   init: function(sel){
-    this.selector = sel;
+    this.selector = $(sel);
     return this;
   },
   clear: function(remove_root){
